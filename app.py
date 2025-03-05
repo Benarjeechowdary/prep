@@ -1,5 +1,3 @@
-import eventlet
-eventlet.monkey_patch()
 from flask import Flask, render_template, redirect, url_for, flash, session, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail, Message
