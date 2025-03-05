@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 80%;
+  margin: auto;
+}
+
+.box {
+  display: block;
+  padding: 20px;
+  background: white;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  text-align: center;
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+/* Style for the question pages */
+.question-container {
+  width: 60%;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Improved question spacing */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: #f9f9f9;
+  margin: 15px 0; /* Added more space between questions */
+  padding: 15px; /* Increased padding inside each question */
+  border-left: 5px solid #007bff;
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: 1.6; /* Improves readability */
+}
+
+.back-link {
+  display: block;
+  text-align: center;
+  margin-top: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #007bff;
+  font-size: 18px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}

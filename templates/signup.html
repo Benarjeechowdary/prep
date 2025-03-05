@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up for AI Interview Preparation</title>
+  <link rel="stylesheet" href="/static/css/signup.css">
+  <!-- Include FontAwesome for the 'i' icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="inner">
+      <div class="image-holder">
+        <img src="/static/img/aiphoto.jpg" alt="image">
+      </div>
+      <form action="{{ url_for('signup') }}" method="POST">
+        <h3>Sign up for AI Interview Preparation</h3>
+
+        <!-- Flash message section -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <ul>
+            {% for category, message in messages %}
+            <li class="flash-message {{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+
+        <div class="form-wrapper">
+          <input type="text" id="name" name="name" placeholder="Username" class="form-control">
+        </div>
+
+        <div class="form-wrapper">
+          <input type="email" id="email" name="email" placeholder="Email Address" class="form-control">
+        </div>
+
+        <div class="form-wrapper">
+          
+          <div class="password-input-wrapper">
+            <input type="password" id="password" name="password" placeholder="Password" class="form-control">
+            <!-- Info icon for guidelines -->
+            <span id="password-info" class="info-icon" onclick="toggleGuidelines()" title="Click for guidelines">
+              <i class="fa fa-info-circle"></i>
+            </span>
+          </div>
+          <!-- Password guidelines section -->
+          <div id="password-guidelines" class="guidelines" style="display: none;">
+            <p><strong>Password Guidelines:</strong></p>
+            <ul>
+              <li>Minimum 8 characters</li>
+              <li>At least one uppercase letter</li>
+              <li>At least one lowercase letter</li>
+              <li>At least one number</li>
+              <li>At least one special character (!, @, #, $, etc.)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="form-wrapper">
+          <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" class="form-control">
+        </div>
+
+        <p class="login-link">Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
+        <button>Sign up</button>
+
+        <div class="social-buttons">
+          <a href="{{ url_for('google_login') }}" class="google-btn"><i class="fab fa-google"></i> Sign up with Google</a>
+          <a href="{{ url_for('facebook_login') }}" class="facebook-btn"><i class="fab fa-facebook-f"></i> Sign up with Facebook</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript to toggle guidelines -->
+  <script>
+    function toggleGuidelines() {
+      var guidelines = document.getElementById("password-guidelines");
+      // Toggle the visibility of the guidelines
+      if (guidelines.style.display === "none" || guidelines.style.display === "") {
+        guidelines.style.display = "block";
+      } else {
+        guidelines.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
