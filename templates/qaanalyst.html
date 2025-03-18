@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QA Analyst Interview Questions</title>
+    <link rel="stylesheet" href="/static/css/resources.css" />
+    <script>
+      function toggleAnswer(index) {
+        const answer = document.getElementById(`answer-${index}`);
+        answer.style.display =
+          answer.style.display === "none" ? "block" : "none";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="question-container">
+      <h1>QA Analyst Interview Questions</h1>
+      <p>Total Questions: <strong>15</strong></p>
+      <ul>
+        <li onclick="toggleAnswer(1)">
+          What is the difference between verification and validation?
+          <div id="answer-1" class="answer">
+            Verification ensures the product is being built correctly, while
+            validation ensures the right product is being built.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(2)">
+          What are the different levels of testing?
+          <div id="answer-2" class="answer">
+            Unit testing, integration testing, system testing, and acceptance
+            testing.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(3)">
+          Explain the concept of black box testing.
+          <div id="answer-3" class="answer">
+            Black box testing focuses on input and output without considering
+            the internal code structure.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(4)">
+          What is regression testing and why is it important?
+          <div id="answer-4" class="answer">
+            Regression testing ensures that new code changes do not affect the
+            existing functionality.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(5)">
+          What are test cases and how do you write them effectively?
+          <div id="answer-5" class="answer">
+            Test cases are step-by-step instructions for testing a feature. They
+            should be clear, concise, and cover positive and negative scenarios.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(6)">
+          What is the difference between functional and non-functional testing?
+          <div id="answer-6" class="answer">
+            Functional testing checks if the application works as expected,
+            while non-functional testing evaluates performance, security, and
+            usability.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(7)">
+          What is the purpose of automated testing?
+          <div id="answer-7" class="answer">
+            Automated testing reduces manual effort, increases test coverage,
+            and allows for faster execution.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(8)">
+          Explain the concept of exploratory testing.
+          <div id="answer-8" class="answer">
+            Exploratory testing involves investigating the application without
+            predefined test cases to discover defects.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(9)">
+          What are some common testing tools used for QA?
+          <div id="answer-9" class="answer">
+            Selenium, JIRA, TestNG, JMeter, and Postman.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(10)">
+          What is the difference between a defect, an error, and a failure?
+          <div id="answer-10" class="answer">
+            A defect is a flaw in code, an error is a human mistake, and a
+            failure is the inability of a system to perform a required function.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(11)">
+          What is smoke testing?
+          <div id="answer-11" class="answer">
+            Smoke testing is a quick test to check the basic functionality of an
+            application.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(12)">
+          What is sanity testing?
+          <div id="answer-12" class="answer">
+            Sanity testing is a narrow test to check if specific functionality
+            works after code changes.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(13)">
+          What is the difference between load testing and stress testing?
+          <div id="answer-13" class="answer">
+            Load testing measures performance under expected load, while stress
+            testing evaluates performance under extreme conditions.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(14)">
+          What is the difference between white box and black box testing?
+          <div id="answer-14" class="answer">
+            White box testing involves testing internal code structure, while
+            black box testing focuses on input and output.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(15)">
+          What is the role of a QA analyst in an Agile environment?
+          <div id="answer-15" class="answer">
+            A QA analyst participates in sprint planning, creates test cases,
+            performs testing, and ensures the product meets quality standards.
+          </div>
+        </li>
+      </ul>
+
+      <a href="{{ url_for('resources') }}" class="back-link"
+        >Back to Job Titles</a
+      >
+    </div>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+Role,Question,Category,Difficulty
+Software Engineer,What is the time complexity of quicksort in the average case?,Algorithms,Medium
+Software Engineer,How does a hash table handle collisions?,Data Structures,Medium
+Software Engineer,Design a URL shortening service like Bitly.,System Design,Hard
+Software Engineer,Write a function to detect a cycle in a linked list.,Coding,Medium
+Software Engineer,Explain the difference between process and thread.,Operating Systems,Easy
+Product Manager,How would you improve the onboarding experience for a new user?,User Experience,Medium
+Product Manager,Explain how you would prioritize features for a new product launch.,Product Strategy,Hard
+Product Manager,What metrics would you use to measure the success of a new feature?,Analytics,Medium
+Product Manager,How do you conduct market research for a new product?,Market Research,Medium
+Product Manager,Describe a time when you handled a conflict between engineering and design teams.,Leadership,Hard
+Data Analyst,Write an SQL query to find the second highest salary from an employee table.,SQL,Medium
+Data Analyst,What is the difference between supervised and unsupervised learning?,Machine Learning,Easy
+Data Analyst,How do you handle missing data in a dataset?,Data Cleaning,Medium
+Data Analyst,"What is A/B testing, and how would you analyze the results?",Experimentation,Medium
+Data Analyst,Explain the central limit theorem and its importance in statistics.,Statistics,Hard

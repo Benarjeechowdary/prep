@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Back-End Developer Interview Questions</title>
+    <link rel="stylesheet" href="/static/css/resources.css" />
+    <script>
+      function toggleAnswer(index) {
+        const answer = document.getElementById(`answer-${index}`);
+        answer.style.display =
+          answer.style.display === "none" ? "block" : "none";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="question-container">
+      <h1>Back-End Developer Interview Questions</h1>
+      <p>Total Questions: <strong>15</strong></p>
+      <ul>
+        <li onclick="toggleAnswer(1)">
+          What is REST and how does it work?
+          <div id="answer-1" class="answer">
+            REST (Representational State Transfer) is an architectural style
+            that uses HTTP methods (GET, POST, PUT, DELETE) to perform CRUD
+            operations on resources.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(2)">
+          What is the difference between SQL and NoSQL databases?
+          <div id="answer-2" class="answer">
+            SQL databases are relational, structured, and use a fixed schema,
+            while NoSQL databases are non-relational, schema-less, and designed
+            for scalability.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(3)">
+          Explain the concept of middleware in web frameworks.
+          <div id="answer-3" class="answer">
+            Middleware functions are used to process requests between the client
+            and server, handling tasks like authentication, logging, and request
+            validation.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(4)">
+          What are microservices?
+          <div id="answer-4" class="answer">
+            Microservices are an architectural style where an application is
+            composed of small, independent services that communicate over HTTP
+            or messaging protocols.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(5)">
+          What is an API gateway?
+          <div id="answer-5" class="answer">
+            An API gateway manages and routes client requests to appropriate
+            microservices, handling tasks like authentication, rate limiting,
+            and load balancing.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(6)">
+          What is the difference between synchronous and asynchronous
+          programming?
+          <div id="answer-6" class="answer">
+            Synchronous programming waits for a task to complete before moving
+            on, while asynchronous programming allows other tasks to continue
+            without waiting.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(7)">
+          What is dependency injection?
+          <div id="answer-7" class="answer">
+            Dependency injection is a design pattern where an object receives
+            its dependencies from an external source rather than creating them
+            internally.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(8)">
+          What is the difference between TCP and UDP?
+          <div id="answer-8" class="answer">
+            TCP is connection-oriented and guarantees delivery, while UDP is
+            connectionless and does not guarantee delivery.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(9)">
+          Explain the purpose of caching in a web application.
+          <div id="answer-9" class="answer">
+            Caching improves performance by storing frequently accessed data in
+            memory to reduce load times and server requests.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(10)">
+          What is a reverse proxy and why is it used?
+          <div id="answer-10" class="answer">
+            A reverse proxy sits between client requests and backend servers,
+            improving security, load balancing, and caching.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(11)">
+          What is the difference between a monolithic and a microservices
+          architecture?
+          <div id="answer-11" class="answer">
+            A monolithic architecture is a single codebase, while a
+            microservices architecture breaks down functionality into small,
+            independent services.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(12)">
+          What is JWT (JSON Web Token) and how is it used?
+          <div id="answer-12" class="answer">
+            JWT is a compact, URL-safe token used to securely transmit
+            information between parties as a JSON object.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(13)">
+          What is the purpose of ORM (Object-Relational Mapping)?
+          <div id="answer-13" class="answer">
+            ORM allows developers to interact with a database using an
+            object-oriented approach rather than writing raw SQL queries.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(14)">
+          Explain the concept of load balancing.
+          <div id="answer-14" class="answer">
+            Load balancing distributes incoming network traffic across multiple
+            servers to prevent overloading and improve response times.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(15)">
+          What is the difference between vertical and horizontal scaling?
+          <div id="answer-15" class="answer">
+            Vertical scaling increases the capacity of a single server, while
+            horizontal scaling adds more servers to handle increased load.
+          </div>
+        </li>
+      </ul>
+
+      <a href="{{ url_for('resources') }}" class="back-link"
+        >Back to Job Titles</a
+      >
+    </div>
+  </body>
+</html>

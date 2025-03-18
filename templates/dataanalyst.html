@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Analyst Interview Questions</title>
+    <link rel="stylesheet" href="/static/css/resources.css" />
+    <script>
+      function toggleAnswer(index) {
+        const answer = document.getElementById(`answer-${index}`);
+        answer.style.display =
+          answer.style.display === "none" ? "block" : "none";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="question-container">
+      <h1>Data Analyst Interview Questions</h1>
+      <ul>
+        <li onclick="toggleAnswer(1)">
+          What are the key responsibilities of a data analyst?
+          <div id="answer-1" class="answer">
+            A data analyst is responsible for gathering, cleaning, and
+            interpreting data to help business decision-making.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(2)">
+          Explain the difference between structured and unstructured data.
+          <div id="answer-2" class="answer">
+            Structured data is organized and stored in a fixed format (e.g.,
+            tables), while unstructured data lacks a predefined format (e.g.,
+            text, images).
+          </div>
+        </li>
+        <li onclick="toggleAnswer(3)">
+          What are some common data cleaning techniques?
+          <div id="answer-3" class="answer">
+            Removing duplicates, handling missing values, correcting data types,
+            and removing outliers.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(4)">
+          How do you handle duplicate data in a dataset?
+          <div id="answer-4" class="answer">
+            Remove duplicates using SQL queries or Python functions like
+            `drop_duplicates()` in pandas.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(5)">
+          Explain the difference between INNER JOIN and OUTER JOIN in SQL.
+          <div id="answer-5" class="answer">
+            INNER JOIN returns only matching rows, while OUTER JOIN returns all
+            rows from one or both tables even if there's no match.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(6)">
+          What is the purpose of normalization in databases?
+          <div id="answer-6" class="answer">
+            Normalization reduces data redundancy and improves data integrity by
+            organizing data into related tables.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(7)">
+          How do you deal with outliers in a dataset?
+          <div id="answer-7" class="answer">
+            Use statistical methods like Z-score, IQR, or remove them if they
+            are erroneous.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(8)">
+          What are the different types of data visualization techniques?
+          <div id="answer-8" class="answer">
+            Bar charts, line charts, scatter plots, heatmaps, and pie charts.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(9)">
+          How do you measure the effectiveness of a data visualization?
+          <div id="answer-9" class="answer">
+            Evaluate clarity, accuracy, engagement, and ease of interpretation.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(10)">
+          What is the difference between correlation and causation?
+          <div id="answer-10" class="answer">
+            Correlation indicates a relationship between two variables, while
+            causation means one variable directly affects the other.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(11)">
+          How would you perform exploratory data analysis (EDA)?
+          <div id="answer-11" class="answer">
+            Analyze data distribution, identify missing values, spot patterns,
+            and visualize relationships using plots.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(12)">
+          What is A/B testing and why is it important?
+          <div id="answer-12" class="answer">
+            A/B testing compares two versions of a variable to determine which
+            performs better, helping in data-driven decisions.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(13)">
+          How do you analyze time-series data?
+          <div id="answer-13" class="answer">
+            Use techniques like decomposition, smoothing, and forecasting models
+            (e.g., ARIMA).
+          </div>
+        </li>
+        <li onclick="toggleAnswer(14)">
+          Explain the importance of SQL in data analysis.
+          <div id="answer-14" class="answer">
+            SQL is used to query, manipulate, and analyze data stored in
+            relational databases.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(15)">
+          What are the key differences between Excel and SQL for data analysis?
+          <div id="answer-15" class="answer">
+            Excel is ideal for small datasets and quick analysis, while SQL
+            handles large datasets and complex queries more efficiently.
+          </div>
+        </li>
+      </ul>
+
+      <a href="{{ url_for('resources') }}" class="back-link"
+        >Back to Job Titles</a
+      >
+    </div>
+  </body>
+</html>

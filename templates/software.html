@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Software Engineer Questions</title>
+    <link rel="stylesheet" href="/static/css/resources.css" />
+    <script>
+      function toggleAnswer(index) {
+        const answer = document.getElementById(`answer-${index}`);
+        answer.style.display =
+          answer.style.display === "none" ? "block" : "none";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="question-container">
+      <h1>Software Engineer Interview Questions</h1>
+      <ul>
+        <li onclick="toggleAnswer(1)">
+          Explain the difference between object-oriented and functional
+          programming.
+          <div id="answer-1" class="answer">
+            OOP models data as objects with properties and behaviors, while
+            functional programming focuses on using pure functions and immutable
+            data.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(2)">
+          How would you optimize a slow database query?
+          <div id="answer-2" class="answer">
+            Use indexing, query optimization techniques, proper joins, and
+            caching to improve performance.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(3)">
+          What are the four pillars of OOP?
+          <div id="answer-3" class="answer">
+            Encapsulation, Abstraction, Inheritance, and Polymorphism.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(4)">
+          How does garbage collection work in Java/Python?
+          <div id="answer-4" class="answer">
+            Garbage collection automatically frees up memory by removing objects
+            that are no longer referenced.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(5)">
+          Explain the SOLID principles.
+          <div id="answer-5" class="answer">
+            SOLID stands for Single Responsibility, Open/Closed, Liskov
+            Substitution, Interface Segregation, and Dependency Inversion.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(6)">
+          What is a deadlock in multithreading?
+          <div id="answer-6" class="answer">
+            A deadlock occurs when two or more threads are waiting for each
+            other to release resources, causing a standstill.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(7)">
+          How does HTTP differ from WebSockets?
+          <div id="answer-7" class="answer">
+            HTTP is a request-response protocol, while WebSockets allow for
+            full-duplex communication over a single connection.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(8)">
+          Explain how hashing works in data structures.
+          <div id="answer-8" class="answer">
+            Hashing converts input data into a fixed-size hash value using a
+            hash function to enable fast data retrieval.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(9)">
+          What is the difference between an interface and an abstract class?
+          <div id="answer-9" class="answer">
+            An interface defines a contract that implementing classes must
+            follow, while an abstract class can have both abstract and concrete
+            methods.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(10)">
+          How would you handle memory leaks in an application?
+          <div id="answer-10" class="answer">
+            Use profiling tools, avoid circular references, and release unused
+            objects to prevent memory leaks.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(11)">
+          Explain the purpose of Docker and Kubernetes.
+          <div id="answer-11" class="answer">
+            Docker allows containerization of applications, and Kubernetes
+            manages container orchestration and scaling.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(12)">
+          How do you implement authentication and authorization in a web app?
+          <div id="answer-12" class="answer">
+            Use JWT tokens, OAuth, or session-based authentication, and control
+            access with role-based permissions.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(13)">
+          Describe a time when you debugged a complex issue.
+          <div id="answer-13" class="answer">
+            Example: Tracing a performance issue to a misconfigured database
+            index and resolving it.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(14)">
+          How do you handle API rate limiting?
+          <div id="answer-14" class="answer">
+            Use a token bucket or leaky bucket algorithm to control request
+            rates and return appropriate status codes.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(15)">
+          What is the CAP theorem in distributed systems?
+          <div id="answer-15" class="answer">
+            The CAP theorem states that a distributed system can only provide
+            two of three guarantees: Consistency, Availability, and Partition
+            Tolerance.
+          </div>
+        </li>
+      </ul>
+
+      <a href="{{ url_for('resources') }}" class="back-link"
+        >Back to Job Titles</a
+      >
+    </div>
+  </body>
+</html>
