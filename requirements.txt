@@ -9,3 +9,4 @@ protobuf==6.30.1
 python-dotenv==1.0.1
 python_bcrypt==0.3.2
 SQLAlchemy==2.0.36
+gunicorn
