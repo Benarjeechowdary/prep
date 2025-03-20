@@ -1,8 +1,9 @@
+import os
 import google.generativeai as genai
 model=genai.GenerativeModel(model_name="gemini-1.5-flash")
 
 # OpenAI API Key
-api_key1 = "AIzaSyDiF3G98dWgoXvOo0FIGI4OgVxVxhpFU7U"
+api_key1=os.getenv('api_key1')
 genai.configure(api_key=api_key1)
 def generate_output(user_answer):
     """Generate follow-up question using OpenAI API."""
