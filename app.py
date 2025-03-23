@@ -23,7 +23,8 @@ DB_NAME = 'site.db'
 mail = Mail(app)
 # Initialize OAuth
 oauth = OAuth(app)
-socketio = SocketIO(app)
+socketio = SocketIO(app, cors_allowed_origins="*")
+
 
 # User Model
 class User(db.Model):
@@ -451,6 +452,7 @@ def reset_password(token):
 
 
 if __name__ == '__main__':
-    socketio.run(app, debug=True, allow_unsafe_werkzeug=True)
+    socketio.run(app, debug=True, allow_unsafe_werkzeug=True, transports=['websocket'])
+
 
 
