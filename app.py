@@ -8,7 +8,11 @@ from flask_socketio import SocketIO
 import google.generativeai as genai
 import secrets,re
 import random
+from gevent import monkey
+from gevent.pywsgi import WSGIServer
 
+# Patch all to make gevent work properly
+monkey.patch_all()
 
 
 # Import AI model
@@ -23,7 +27,7 @@ DB_NAME = 'site.db'
 mail = Mail(app)
 # Initialize OAuth
 oauth = OAuth(app)
-socketio = SocketIO(app, cors_allowed_origins="*")
+socketio = SocketIO(app, cors_allowed_origins="*",async_mode="gevent")
 
 
 # User Model
