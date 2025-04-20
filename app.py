@@ -453,6 +453,27 @@ def reset_password(token):
 
     return render_template('reset_password.html', token=token)
 
+@app.route('/resume')
+def resume():
+    return render_template('resume.html')
+
+@app.route('/create', methods=['GET', 'POST'])
+def create_resume():
+    if request.method == 'POST':
+        resume_data = {
+            'name': request.form.get('name'),
+            'email': request.form.get('email'),
+            'phone': request.form.get('phone'),
+            'summary': request.form.get('summary'),
+            'education': request.form.getlist('education'),
+            'experience': request.form.getlist('experience'),
+            'certifications': request.form.getlist('certifications'),
+            'projects': request.form.getlist('projects'),
+            'skills': request.form.getlist('skills')
+        }
+        return render_template('preview.html', resume=resume_data)
+    return render_template('create.html')
+
 
 
 if __name__ == '__main__':
