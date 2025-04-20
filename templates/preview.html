@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container resume-preview">
+    <div class="resume-header">
+        <h1>{{ resume.name }}</h1>
+        <div class="contact-info">
+            <p>{{ resume.email }} | {{ resume.phone }}</p>
+        </div>
+    </div>
+
+    <div class="resume-section">
+        <h2>Professional Summary</h2>
+        <p>{{ resume.summary }}</p>
+    </div>
+
+    <div class="resume-section">
+        <h2>Education</h2>
+        <ul>
+            {% for edu in resume.education %}
+            <li>{{ edu }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="resume-section">
+        <h2>Experience</h2>
+        <ul>
+            {% for exp in resume.experience %}
+            <li>{{ exp }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="resume-section">
+        <h2>Certifications</h2>
+        <ul>
+            {% for cert in resume.certifications %}
+            <li>{{ cert }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="resume-section">
+        <h2>Projects</h2>
+        <ul>
+            {% for project in resume.projects %}
+            <li>{{ project }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="resume-section">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            {% for skill in resume.skills %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="actions">
+        <button onclick="window.print()" class="btn primary">Download PDF</button>
+    </div>
+</div>
+{% endblock %}

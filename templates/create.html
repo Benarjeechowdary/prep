@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>Create Your Resume</h2>
+    <form action="{{ url_for('create_resume') }}" method="POST" id="resumeForm">
+        <div class="form-section">
+            <h3>Personal Information</h3>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="summary">Professional Summary</label>
+                <textarea id="summary" name="summary" rows="4" required></textarea>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h3>Education</h3>
+            <div id="educationFields">
+                <div class="form-group">
+                    <input type="text" name="education" placeholder="Degree, Institution - Year" required>
+                </div>
+            </div>
+            <button type="button" class="btn secondary" onclick="addField('educationFields', 'education')">Add Education</button>
+        </div>
+
+        <div class="form-section">
+            <h3>Experience</h3>
+            <div id="experienceFields">
+                <div class="form-group">
+                    <input type="text" name="experience" placeholder="Position - Company - Duration" required>
+                </div>
+            </div>
+            <button type="button" class="btn secondary" onclick="addField('experienceFields', 'experience')">Add Experience</button>
+        </div>
+
+        <div class="form-section">
+            <h3>Certifications</h3>
+            <div id="certificationsFields">
+                <div class="form-group">
+                    <input type="text" name="certifications" placeholder="Certification Name - Issuing Organization - Year" required>
+                </div>
+            </div>
+            <button type="button" class="btn secondary" onclick="addField('certificationsFields', 'certifications')">Add Certification</button>
+        </div>
+
+        <div class="form-section">
+            <h3>Projects</h3>
+            <div id="projectsFields">
+                <div class="form-group">
+                    <input type="text" name="projects" placeholder="Project Name - Description - Technologies Used" required>
+                </div>
+            </div>
+            <button type="button" class="btn secondary" onclick="addField('projectsFields', 'projects')">Add Project</button>
+        </div>
+
+        <div class="form-section">
+            <h3>Skills</h3>
+            <div id="skillsFields">
+                <div class="form-group">
+                    <input type="text" name="skills" placeholder="Skill" required>
+                </div>
+            </div>
+            <button type="button" class="btn secondary" onclick="addField('skillsFields', 'skills')">Add Skill</button>
+        </div>
+
+        <button type="submit" class="btn primary">Preview Resume</button>
+    </form>
+</div>
+{% endblock %}

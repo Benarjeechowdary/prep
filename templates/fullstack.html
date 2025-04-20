@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full-Stack Developer Interview Questions</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/resources.css') }}"
+    />
+    <script>
+      function toggleAnswer(index) {
+        const answer = document.getElementById(`answer-${index}`);
+        answer.style.display =
+          answer.style.display === "none" ? "block" : "none";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="question-container">
+      <h1>Full-Stack Developer Interview Questions</h1>
+      <p>Total Questions: <strong>15</strong></p>
+      <ul>
+        <li onclick="toggleAnswer(1)">
+          What is the difference between front-end and back-end development?
+          <div id="answer-1" class="answer">
+            Front-end development focuses on the user interface and experience,
+            while back-end development handles the server, database, and
+            application logic.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(2)">
+          What is REST and how does it work?
+          <div id="answer-2" class="answer">
+            REST (Representational State Transfer) is an architectural style
+            that uses HTTP methods to perform CRUD operations on resources.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(3)">
+          What are the key differences between SQL and NoSQL databases?
+          <div id="answer-3" class="answer">
+            SQL databases are relational and structured, while NoSQL databases
+            are non-relational and flexible with dynamic schemas.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(4)">
+          Explain the concept of MVC (Model-View-Controller) architecture.
+          <div id="answer-4" class="answer">
+            MVC separates an application into three components: Model (data),
+            View (UI), and Controller (logic).
+          </div>
+        </li>
+        <li onclick="toggleAnswer(5)">
+          What is the purpose of CORS (Cross-Origin Resource Sharing)?
+          <div id="answer-5" class="answer">
+            CORS allows or restricts resources on a web page to be requested
+            from another domain.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(6)">
+          What are microservices and how are they different from monolithic
+          architecture?
+          <div id="answer-6" class="answer">
+            Microservices are small, independent services that communicate with
+            each other, while monolithic architecture combines all components
+            into one codebase.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(7)">
+          Explain the difference between synchronous and asynchronous
+          programming.
+          <div id="answer-7" class="answer">
+            Synchronous programming blocks execution until a task completes,
+            while asynchronous programming allows other tasks to continue during
+            execution.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(8)">
+          What is an API gateway and why is it important?
+          <div id="answer-8" class="answer">
+            An API gateway handles requests and routes them to the appropriate
+            microservice while managing authentication and rate limiting.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(9)">
+          What is the difference between client-side and server-side rendering?
+          <div id="answer-9" class="answer">
+            Client-side rendering happens in the browser using JavaScript, while
+            server-side rendering generates HTML on the server and sends it to
+            the browser.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(10)">
+          What are WebSockets and how do they work?
+          <div id="answer-10" class="answer">
+            WebSockets enable real-time communication between a client and
+            server over a persistent connection.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(11)">
+          What is the difference between `==` and `===` in JavaScript?
+          <div id="answer-11" class="answer">
+            `==` compares values after type conversion, while `===` compares
+            both value and type.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(12)">
+          What is JWT (JSON Web Token) and how is it used for authentication?
+          <div id="answer-12" class="answer">
+            JWT is a token used to securely transmit information between parties
+            as a JSON object for authentication.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(13)">
+          What are the advantages of using Docker for deployment?
+          <div id="answer-13" class="answer">
+            Docker provides containerization, which ensures consistent
+            environments, easy scaling, and faster deployments.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(14)">
+          What are Promises in JavaScript?
+          <div id="answer-14" class="answer">
+            Promises represent the eventual completion or failure of an
+            asynchronous operation and its resulting value.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(15)">
+          What is the difference between HTTP and HTTPS?
+          <div id="answer-15" class="answer">
+            HTTPS is the secure version of HTTP, using SSL/TLS encryption to
+            secure communication between the client and server.
+          </div>
+        </li>
+      </ul>
+
+      <a href="{{ url_for('resources') }}" class="back-link"
+        >Back to Job Titles</a
+      >
+    </div>
+  </body>
+</html>

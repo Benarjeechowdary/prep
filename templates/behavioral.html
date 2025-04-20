@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Behavioural Round Interview Questions</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/resources.css') }}"
+    />
+    <script>
+      function toggleAnswer(index) {
+        const answer = document.getElementById(`answer-${index}`);
+        answer.style.display =
+          answer.style.display === "none" ? "block" : "none";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="question-container">
+      <h1>Behavioural Round Interview Questions</h1>
+      <p>Total Questions: <strong>15</strong></p>
+      <ul>
+        <li onclick="toggleAnswer(1)">
+          Can you describe a challenging situation at work and how you handled
+          it?
+          <div id="answer-1" class="answer">
+            Provide a specific example using the STAR method (Situation, Task,
+            Action, Result).
+          </div>
+        </li>
+        <li onclick="toggleAnswer(2)">
+          Tell me about a time when you had to work under pressure.
+          <div id="answer-2" class="answer">
+            Explain how you managed stress and successfully handled the
+            situation.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(3)">
+          How do you handle conflicts with coworkers?
+          <div id="answer-3" class="answer">
+            Describe a situation where you resolved a conflict through
+            communication and compromise.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(4)">
+          Give an example of a time when you showed leadership skills.
+          <div id="answer-4" class="answer">
+            Explain how you took charge of a situation and motivated others.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(5)">
+          Tell me about a mistake you made at work and how you handled it.
+          <div id="answer-5" class="answer">
+            Focus on how you took responsibility and the steps you took to fix
+            it.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(6)">
+          Describe a time when you had to meet a tight deadline.
+          <div id="answer-6" class="answer">
+            Explain how you prioritized tasks and managed time to meet the
+            deadline.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(7)">
+          Have you ever had to deal with a difficult client or stakeholder?
+          <div id="answer-7" class="answer">
+            Describe how you handled the situation with professionalism and
+            problem-solving skills.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(8)">
+          How do you handle constructive criticism?
+          <div id="answer-8" class="answer">
+            Explain how you listen, learn, and apply feedback to improve.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(9)">
+          Tell me about a time when you had to adapt to a significant change.
+          <div id="answer-9" class="answer">
+            Describe how you remained flexible and adjusted to the new
+            situation.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(10)">
+          What motivates you at work?
+          <div id="answer-10" class="answer">
+            Explain what drives you to perform well and stay committed to your
+            goals.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(11)">
+          Describe a time when you had to persuade someone to see things your
+          way.
+          <div id="answer-11" class="answer">
+            Use the STAR method to explain how you presented your case and
+            influenced the outcome.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(12)">
+          Tell me about a time when you worked in a team to achieve a goal.
+          <div id="answer-12" class="answer">
+            Describe the role you played, how you collaborated, and the outcome.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(13)">
+          How do you prioritize your work when you have multiple tasks to
+          complete?
+          <div id="answer-13" class="answer">
+            Explain how you organize tasks, set deadlines, and manage your time.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(14)">
+          Give an example of a time when you had to think on your feet.
+          <div id="answer-14" class="answer">
+            Explain how you assessed the situation quickly and made a decision.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(15)">
+          How do you handle failure?
+          <div id="answer-15" class="answer">
+            Describe how you reflect on failures, learn from them, and improve.
+          </div>
+        </li>
+      </ul>
+
+      <a href="{{ url_for('resources') }}" class="back-link"
+        >Back to Job Titles</a
+      >
+    </div>
+  </body>
+</html>

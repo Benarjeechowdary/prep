@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Developer Interview Questions</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/resources.css') }}"
+    />
+
+    <script>
+      function toggleAnswer(index) {
+        const answer = document.getElementById(`answer-${index}`);
+        answer.style.display =
+          answer.style.display === "none" ? "block" : "none";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="question-container">
+      <h1>Python Developer Interview Questions</h1>
+      <ul>
+        <li onclick="toggleAnswer(1)">
+          What are Python’s key features?
+          <div id="answer-1" class="answer">
+            Python is interpreted, dynamically typed, object-oriented, and
+            supports multiple programming paradigms.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(2)">
+          What is the difference between `is` and `==` in Python?
+          <div id="answer-2" class="answer">
+            `is` checks for object identity (whether two objects are the same in
+            memory), while `==` checks for value equality.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(3)">
+          What are Python’s built-in data types?
+          <div id="answer-3" class="answer">
+            Common types include `int`, `float`, `str`, `list`, `tuple`, `set`,
+            `dict`, and `bool`.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(4)">
+          Explain the concept of Python’s GIL (Global Interpreter Lock).
+          <div id="answer-4" class="answer">
+            The GIL ensures that only one thread executes Python bytecode at a
+            time, even on multi-core processors.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(5)">
+          How does memory management work in Python?
+          <div id="answer-5" class="answer">
+            Python uses reference counting and garbage collection to manage
+            memory.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(6)">
+          What is the difference between a list and a tuple in Python?
+          <div id="answer-6" class="answer">
+            Lists are mutable (can be modified), while tuples are immutable
+            (cannot be modified).
+          </div>
+        </li>
+        <li onclick="toggleAnswer(7)">
+          How do you handle exceptions in Python?
+          <div id="answer-7" class="answer">
+            Use `try-except` blocks to catch and handle exceptions.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(8)">
+          What is a Python decorator?
+          <div id="answer-8" class="answer">
+            A decorator is a function that modifies the behavior of another
+            function or class.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(9)">
+          Explain the difference between deep copy and shallow copy.
+          <div id="answer-9" class="answer">
+            A shallow copy copies references to objects, while a deep copy
+            creates new objects recursively.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(10)">
+          What is the purpose of `__init__` in Python classes?
+          <div id="answer-10" class="answer">
+            `__init__` is the constructor method used to initialize objects.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(11)">
+          What are Python’s lambda functions?
+          <div id="answer-11" class="answer">
+            Lambda functions are anonymous functions defined using the `lambda`
+            keyword.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(12)">
+          How do you handle file operations in Python?
+          <div id="answer-12" class="answer">
+            Use `open()` to read/write files and `with` to manage file context.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(13)">
+          What is the difference between `@staticmethod`, `@classmethod`, and
+          instance methods?
+          <div id="answer-13" class="answer">
+            `@staticmethod` defines a method that doesn’t access the class;
+            `@classmethod` takes the class as an argument; instance methods take
+            `self` as the first argument.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(14)">
+          What is a Python generator?
+          <div id="answer-14" class="answer">
+            A generator is an iterator that yields values one at a time using
+            the `yield` keyword.
+          </div>
+        </li>
+        <li onclick="toggleAnswer(15)">
+          What is the difference between `None` and `False` in Python?
+          <div id="answer-15" class="answer">
+            `None` represents the absence of a value, while `False` is a boolean
+            value.
+          </div>
+        </li>
+      </ul>
+
+      <a href="{{ url_for('resources') }}" class="back-link"
+        >Back to Job Titles</a
+      >
+    </div>
+  </body>
+</html>

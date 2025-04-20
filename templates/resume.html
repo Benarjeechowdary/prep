@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Welcome to Resume Maker</h1>
+    <p>Create your professional resume in minutes</p>
+    <div class="cta-buttons">
+        <a href="{{ url_for('create_resume') }}" class="btn primary">Create Resume</a>
+    </div>
+</div>
+{% endblock %}
