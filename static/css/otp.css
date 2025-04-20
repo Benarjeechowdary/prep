@@ -1,0 +1,125 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e1e2f, #3b3b5e);
+    color: #ffffff;
+}
+
+/* Glassmorphic Container */
+.glass-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    padding: 30px 20px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    text-align: center;
+    width: 360px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.glass-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.glass-container p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* OTP Input Fields */
+.otp-input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.otp-input {
+    width: 48px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #ffffff;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.otp-input:focus {
+    border-color: #00ffcc;
+    box-shadow: 0 4px 10px rgba(0, 255, 204, 0.6);
+}
+
+/* Buttons */
+.verify-btn,
+.resend-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.verify-btn {
+    background: linear-gradient(135deg, #00ffcc, #008cff);
+}
+
+.verify-btn:hover {
+    background: linear-gradient(135deg, #008cff, #00ffcc);
+}
+
+.resend-btn {
+    background: linear-gradient(135deg, #00ffcc, #008cff);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    margin-top: 15px;
+}
+
+.resend-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+.alert {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    color:white;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}

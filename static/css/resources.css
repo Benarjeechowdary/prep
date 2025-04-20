@@ -1,0 +1,129 @@
+/* General Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+/* Header Styling */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+/* Container for Main Page (Job Titles) */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Box Styling for Job Titles */
+.box {
+  display: block;
+  padding: 20px;
+  background: #ffffff;
+  text-decoration: none;
+  color: #222;
+  font-size: 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Question Container Styling */
+.question-container {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Question List Styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: #fafafa;
+  margin-bottom: 12px;
+  padding: 15px;
+  border-left: 6px solid #007bff;
+  border-radius: 8px;
+  font-size: 18px;
+  line-height: 1.5;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: #f0f8ff;
+}
+
+/* Answer Styling */
+.answer {
+  display: none;
+  padding: 12px;
+  margin-top: 8px;
+  background-color: #f1f1f1;
+  border-left: 4px solid #007bff;
+  border-radius: 6px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+/* Back Link Styling */
+.back-link {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .question-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  li {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .answer {
+    font-size: 14px;
+  }
+}
